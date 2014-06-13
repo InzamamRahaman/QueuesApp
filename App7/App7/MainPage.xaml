@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="App7.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+		<Flyout x:Key="RegisterFlyout">
+			<Grid Height="620" Width="375">
+				<TextBlock Height="40" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333">
+					<Run Text="Email"/>
+					<LineBreak/>
+					<Run/>
+				</TextBlock>
+				<TextBlock HorizontalAlignment="Left" Height="40" Margin="0,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" FontSize="21.333" Text="Password"/>
+				<TextBlock HorizontalAlignment="Left" Height="40" Margin="1,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" FontSize="21.333">
+					<Run Text="Retype Password"/>
+					<LineBreak/>
+					<Run/>
+				</TextBlock>
+				<TextBlock HorizontalAlignment="Left" Height="40" Margin="1,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" FontSize="21.333">
+					<Run Text="First Name"/>
+					<LineBreak/>
+					<Run/>
+				</TextBlock>
+				<TextBlock HorizontalAlignment="Left" Height="40" Margin="1,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" FontSize="21.333">
+					<Run Text="Last Name"/>
+					<LineBreak/>
+					<Run/>
+				</TextBlock>
+				<TextBox x:Name="FirstNameFlyoutBox" Height="30" Margin="1,315,-2,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+				<TextBox x:Name="EmailFlyoutBox" Height="30" Margin="0,55,-1,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+				<TextBox x:Name="LastNameFlyoutBox" Height="30" Margin="0,414,-1,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+				<PasswordBox x:Name="PasswordFlyoutBox" Height="30" Margin="1,149,-1,0" VerticalAlignment="Top"/>
+				<PasswordBox x:Name="RetypePasswordFlyoutBox" Height="30" Margin="0,232,0,0" VerticalAlignment="Top"/>
+				<Button Click="RegisterFlyoutButton_Click"  x:Name="RegisterFlyoutButton" Content="REGISTER" HorizontalAlignment="Left" Height="10" Margin="78,459,0,0" VerticalAlignment="Top" Width="220" Background="#FF18066C"/>
+				<TextBlock x:Name="InformationFlyoutBox" HorizontalAlignment="Left" Height="86" Margin="28,524,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" FontSize="18.667" TextAlignment="Center"/>
+			</Grid>
+		</Flyout>
+	</Page.Resources>
+
+    <Grid>
+    	<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="68" Margin="0,10,0,0" VerticalAlignment="Top" Width="400" Background="#FF18066C">
+    		<TextBlock Margin="99.167,9.167,94.167,9.5" TextWrapping="Wrap" Text="ServiceMe" FontSize="29.333" TextAlignment="Center"/>
+    	</Border>
+    	<TextBlock HorizontalAlignment="Left" Height="45" Margin="35,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="26.667">
+    		<Run Text="Email"/>
+    		<LineBreak/>
+    		<Run/>
+    	</TextBlock>
+    	<TextBlock HorizontalAlignment="Left" Height="45" Margin="35,263,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="250" FontSize="26.667"/>
+    	<TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="15" Margin="35,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+    	<PasswordBox HorizontalAlignment="Left" Margin="560,423,-211,0" VerticalAlignment="Top"/>
+    	<PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="20" Margin="35,308,0,0" VerticalAlignment="Top" Width="280"/>
+    	<Button x:Name="LogInButton" Content="LOG IN" HorizontalAlignment="Left" Height="77" Margin="35,426,0,0" VerticalAlignment="Top" Width="305" Background="#FF18066C" Click="LogInButton_Click"/>
+    	<Button x:Name="RegisterButton" Content="REGISTER" HorizontalAlignment="Left" Height="78" Margin="35,505,0,0" VerticalAlignment="Top" Width="305" Background="#FF18066C" Flyout="{StaticResource RegisterFlyout}"/>
+
+    </Grid>
+</Page>
